@@ -1,0 +1,533 @@
+[gd_scene load_steps=54 format=2]
+
+[ext_resource path="res://Personagem/plano de fundo/Background Complete.png" type="Texture" id=1]
+[ext_resource path="res://mapa2.tres" type="TileSet" id=2]
+[ext_resource path="res://spike A.png" type="Texture" id=3]
+[ext_resource path="res://scripts/items.gd" type="Script" id=4]
+[ext_resource path="res://scripts/global.gd" type="Script" id=5]
+[ext_resource path="res://scripts/jogador.gd" type="Script" id=6]
+[ext_resource path="res://grass.tres" type="TileSet" id=7]
+[ext_resource path="res://Personagem/personagem sem arma.png" type="Texture" id=8]
+[ext_resource path="res://Collected.png" type="Texture" id=9]
+[ext_resource path="res://coin_gold.png" type="Texture" id=10]
+[ext_resource path="res://spike C.png" type="Texture" id=11]
+[ext_resource path="res://spike D.png" type="Texture" id=12]
+[ext_resource path="res://scripts/damage.gd" type="Script" id=13]
+
+[sub_resource type="RectangleShape2D" id=52]
+extents = Vector2( 126.5, 84 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 0, 704, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 64, 704, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 128, 704, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 192, 704, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 256, 704, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 320, 704, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 384, 704, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 448, 704, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 512, 704, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 0, 576, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 64, 576, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=13]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 128, 576, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=14]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 192, 576, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=15]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 256, 576, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=16]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 320, 576, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=17]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 384, 576, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=18]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 448, 576, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=19]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 512, 576, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=25]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 0, 960, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=26]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 64, 960, 64, 64 )
+
+[sub_resource type="SpriteFrames" id=24]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
+"loop": true,
+"name": "andar direito",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ) ],
+"loop": true,
+"name": "andar esquerdo",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 25 ), SubResource( 26 ) ],
+"loop": true,
+"name": "default",
+"speed": 1.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=1]
+height = 26.0
+
+[sub_resource type="CircleShape2D" id=27]
+
+[sub_resource type="AtlasTexture" id=37]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=38]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=39]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=40]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=41]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 128, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=42]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 160, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=43]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 192, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=44]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 224, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=36]
+animations = [ {
+"frames": [ SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=45]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=46]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=47]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=48]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=49]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 128, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=50]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 160, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=51]
+animations = [ {
+"frames": [ SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Game" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="mapa" type="Node2D" parent="."]
+
+[node name="TileMap" type="TileMap" parent="mapa"]
+position = Vector2( 7, -6 )
+tile_set = ExtResource( 7 )
+format = 1
+
+[node name="background6" type="Sprite" parent="mapa"]
+show_behind_parent = true
+light_mask = 2
+position = Vector2( 4815, -1352 )
+scale = Vector2( 23.2388, 13.7075 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TileMap3" type="TileMap" parent="mapa"]
+scale = Vector2( 7, 7 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+show_collision = true
+format = 1
+tile_data = PoolIntArray( -1441778, 1, 0, -1441777, 1, 0, -1441776, 1, 0, -1441775, 1, 0, -1441774, 1, 0, -1441773, 1, 0, -1441772, 1, 0, -1441771, 1, 0, -1441770, 1, 0, -1441769, 1, 0, -1441768, 1, 0, -1441767, 1, 0, -1441766, 1, 0, -1441765, 1, 0, -1441764, 1, 0, -1441763, 1, 0, -1441762, 1, 0, -1441761, 1, 0, -1441760, 1, 0, -1441759, 1, 0, -1441758, 1, 0, -1441757, 1, 0, -1441756, 1, 0, -1441755, 1, 0, -1441754, 1, 0, -1441753, 1, 0, -1441752, 1, 0, -1441751, 1, 0, -1441750, 1, 0, -1310728, 1, 0, -1310727, 1, 0, -1310726, 1, 0, -1310725, 1, 0, -1310724, 1, 0, -1310723, 1, 0, -1310722, 1, 0, -1310721, 1, 0, -1376256, 1, 0, -1376255, 1, 0, -1376254, 1, 0, -1376253, 1, 0, -1376252, 1, 0, -1376251, 1, 0, -1376250, 1, 0, -1376249, 1, 0, -1376248, 1, 0, -1376247, 1, 0, -1376246, 1, 0, -1376245, 1, 0, -1376244, 1, 0, -1376243, 1, 0, -1376242, 1, 0, -1376241, 1, 0, -1376240, 1, 0, -1376239, 1, 0, -1376238, 1, 0, -1376237, 1, 0, -1376236, 1, 0, -1376235, 1, 0, -1376234, 1, 0, -1376233, 1, 0, -1376232, 1, 0, -1376231, 1, 0, -1376230, 1, 0, -1376229, 1, 0, -1376228, 1, 0, -1376227, 1, 0, -1376226, 1, 0, -1376225, 1, 0, -1376224, 1, 0, -1376223, 1, 0, -1376222, 1, 0, -1376221, 1, 0, -1376220, 1, 0, -1376219, 1, 0, -1376218, 1, 0, -1376217, 1, 0, -1376216, 1, 0, -1376215, 1, 0, -1376214, 1, 0, -1376213, 1, 0, -1376212, 1, 0, -1376211, 1, 0, -1376210, 1, 0, -1376209, 1, 0, -1376208, 1, 0, -1376207, 1, 0, -1376206, 1, 0, -1376205, 1, 0, -1376204, 1, 0, -1376203, 1, 0, -1376202, 1, 0, -1376201, 1, 0, -1245195, 1, 0, -1245194, 1, 0, -1245193, 1, 0, -1245192, 1, 0, -1245191, 1, 0, -1245190, 1, 0, -1245189, 1, 0, -1245188, 1, 0, -1245187, 1, 0, -1245186, 1, 0, -1245185, 1, 0, -1310720, 1, 0, -1310719, 1, 0, -1310718, 1, 0, -1310717, 1, 0, -1310716, 1, 0, -1310715, 1, 0, -1310714, 1, 0, -1310713, 1, 0, -1310712, 1, 0, -1310711, 1, 0, -1310710, 1, 0, -1310709, 1, 0, -1310708, 1, 0, -1310707, 1, 0, -1310706, 1, 0, -1310705, 1, 0, -1310704, 1, 0, -1310703, 1, 0, -1310702, 1, 0, -1310701, 1, 0, -1310700, 1, 0, -1310699, 1, 0, -1310698, 1, 0, -1310697, 1, 0, -1310696, 1, 0, -1310695, 1, 0, -1310694, 1, 0, -1310693, 1, 0, -1310692, 1, 0, -1310691, 1, 0, -1310690, 1, 0, -1310689, 1, 0, -1310688, 1, 0, -1310687, 1, 0, -1310686, 1, 0, -1310685, 1, 0, -1310684, 1, 0, -1310683, 1, 0, -1310682, 1, 0, -1310681, 1, 0, -1310680, 1, 0, -1310679, 1, 0, -1310678, 1, 0, -1310677, 1, 0, -1310676, 1, 0, -1310675, 1, 0, -1310674, 1, 0, -1310673, 1, 0, -1310672, 1, 0, -1310671, 1, 0, -1310670, 1, 0, -1310669, 1, 0, -1310668, 1, 0, -1310667, 1, 0, -1310666, 1, 0, -1310665, 1, 0, -1310664, 1, 0, -1310663, 1, 0, -1179654, 1, 0, -1179653, 1, 0, -1179652, 1, 0, -1179651, 1, 0, -1179650, 1, 0, -1179649, 1, 0, -1245184, 1, 0, -1245183, 1, 0, -1245182, 1, 0, -1245181, 1, 0, -1245180, 1, 0, -1245179, 1, 0, -1245178, 1, 0, -1245177, 1, 0, -1245176, 1, 0, -1245175, 1, 0, -1245174, 1, 0, -1245173, 1, 0, -1245172, 1, 0, -1245171, 1, 0, -1245170, 1, 0, -1245169, 1, 0, -1245168, 1, 0, -1245167, 1, 0, -1245166, 1, 0, -1245165, 1, 0, -1245164, 1, 0, -1245163, 1, 0, -1245162, 1, 0, -1245161, 1, 0, -1245160, 1, 0, -1245159, 1, 0, -1245158, 1, 0, -1245157, 1, 0, -1245156, 1, 0, -1245155, 1, 0, -1245154, 1, 0, -1245153, 1, 0, -1245152, 1, 0, -1245151, 1, 0, -1245150, 1, 0, -1245149, 1, 0, -1245148, 1, 0, -1245147, 1, 0, -1245146, 1, 0, -1245145, 1, 0, -1245144, 1, 0, -1245143, 1, 0, -1245142, 1, 0, -1245141, 1, 0, -1245140, 1, 0, -1245139, 1, 0, -1245138, 1, 0, -1245137, 1, 0, -1245136, 1, 0, -1245135, 1, 0, -1245134, 1, 0, -1245133, 1, 0, -1245132, 1, 0, -1245131, 1, 0, -1245130, 1, 0, -1245129, 1, 0, -1245128, 1, 0, -1245127, 1, 0, -1114118, 1, 0, -1114117, 1, 0, -1114116, 1, 0, -1114115, 1, 0, -1114114, 1, 0, -1114113, 1, 0, -1179648, 1, 0, -1179647, 1, 0, -1179646, 1, 0, -1179645, 1, 0, -1179644, 1, 0, -1179643, 1, 0, -1179642, 1, 0, -1179641, 1, 0, -1179640, 1, 0, -1179639, 1, 0, -1179638, 1, 0, -1179637, 1, 0, -1179636, 1, 0, -1179635, 1, 0, -1179634, 1, 0, -1179633, 1, 0, -1179632, 1, 0, -1179631, 1, 0, -1179630, 1, 0, -1179629, 1, 0, -1179628, 1, 0, -1179627, 1, 0, -1179626, 1, 0, -1179625, 1, 0, -1179624, 1, 0, -1179623, 1, 0, -1179622, 1, 0, -1179621, 1, 0, -1179620, 1, 0, -1179619, 1, 0, -1179618, 1, 0, -1179617, 1, 0, -1179616, 1, 0, -1179615, 1, 0, -1179614, 1, 0, -1179613, 1, 0, -1179612, 1, 0, -1179611, 1, 0, -1179610, 1, 0, -1179609, 1, 0, -1179608, 1, 0, -1179607, 1, 0, -1179606, 1, 0, -1179605, 1, 0, -1179604, 1, 0, -1179603, 1, 0, -1179602, 1, 0, -1179601, 1, 0, -1179600, 1, 0, -1179599, 1, 0, -1179598, 1, 0, -1179597, 1, 0, -1179596, 1, 0, -1179595, 1, 0, -1179594, 1, 0, -1179593, 1, 0, -1048585, 1, 0, -1048584, 1, 0, -1048583, 1, 0, -1048582, 1, 0, -1048581, 1, 0, -1048580, 1, 0, -1048579, 1, 0, -1048578, 1, 0, -1048577, 1, 0, -1114112, 1, 0, -1114111, 1, 0, -1114110, 1, 0, -1114109, 1, 0, -1114108, 1, 0, -1114107, 1, 0, -1114106, 1, 0, -1114105, 1, 0, -1114104, 1, 0, -1114103, 1, 0, -1114102, 1, 0, -1114101, 1, 0, -1114100, 1, 0, -1114099, 1, 0, -1114098, 1, 0, -1114097, 1, 0, -1114096, 1, 0, -1114095, 1, 0, -1114094, 1, 0, -1114093, 1, 0, -1114092, 1, 0, -1114091, 1, 0, -1114090, 1, 0, -1114089, 1, 0, -1114088, 1, 0, -1114087, 1, 0, -1114086, 1, 0, -1114085, 1, 0, -1114084, 1, 0, -1114083, 1, 0, -1114082, 1, 0, -1114081, 1, 0, -1114080, 1, 0, -1114079, 1, 0, -1114078, 1, 0, -1114077, 1, 0, -1114076, 1, 0, -1114075, 1, 0, -1114074, 1, 0, -1114073, 1, 0, -1114072, 1, 0, -1114071, 1, 0, -1114070, 1, 0, -1114069, 1, 0, -1114068, 1, 0, -1114067, 1, 0, -1114066, 1, 0, -1114065, 1, 0, -1114064, 1, 0, -1114063, 1, 0, -1114062, 1, 0, -1114061, 1, 0, -1114060, 1, 0, -1114059, 1, 0, -1114058, 1, 0, -1114057, 1, 0, -1114056, 1, 0, -1114055, 1, 0, -983045, 1, 0, -983044, 1, 0, -983043, 1, 0, -983042, 1, 0, -983041, 1, 0, -1048576, 1, 0, -1048575, 1, 0, -1048574, 1, 0, -1048573, 1, 0, -1048572, 1, 0, -1048571, 1, 0, -1048570, 1, 0, -1048569, 1, 0, -1048568, 1, 0, -1048567, 1, 0, -1048566, 1, 0, -1048565, 1, 0, -1048564, 1, 0, -1048563, 1, 0, -1048562, 1, 0, -1048561, 1, 0, -1048560, 1, 0, -1048559, 1, 0, -1048558, 1, 0, -1048557, 1, 0, -1048556, 1, 0, -1048555, 1, 0, -1048554, 1, 0, -1048553, 1, 0, -1048552, 1, 0, -1048551, 1, 0, -1048550, 1, 0, -1048549, 1, 0, -1048548, 1, 0, -1048547, 1, 0, -1048546, 1, 0, -1048545, 1, 0, -1048544, 1, 0, -1048543, 1, 0, -1048542, 1, 0, -1048541, 1, 0, -1048540, 1, 0, -1048539, 1, 0, -1048538, 1, 0, -1048537, 1, 0, -1048536, 1, 0, -1048535, 1, 0, -1048534, 1, 0, -1048533, 1, 0, -1048532, 1, 0, -1048531, 1, 0, -1048530, 1, 0, -1048529, 1, 0, -1048528, 1, 0, -1048527, 1, 0, -1048526, 1, 0, -1048525, 1, 0, -917509, 1, 0, -917508, 1, 0, -917507, 1, 0, -917506, 1, 0, -917505, 1, 0, -983040, 1, 0, -982998, 1, 0, -982997, 1, 0, -982996, 1, 0, -982995, 1, 0, -982994, 1, 0, -982993, 1, 0, -982992, 1, 0, -851973, 1, 0, -851972, 1, 0, -851971, 1, 0, -851970, 1, 0, -851969, 1, 0, -917504, 1, 0, -917462, 1, 0, -917461, 1, 0, -917460, 1, 0, -917459, 1, 0, -917458, 1, 0, -917457, 1, 0, -917456, 1, 0, -786437, 1, 0, -786436, 1, 0, -786435, 1, 0, -786434, 1, 0, -786433, 1, 0, -851968, 1, 0, -851926, 1, 0, -851925, 1, 0, -851924, 1, 0, -851923, 1, 0, -851922, 1, 0, -851921, 1, 0, -851920, 1, 0, -720901, 1, 0, -720900, 1, 0, -720899, 1, 0, -720898, 1, 0, -720897, 1, 0, -786432, 1, 0, -786431, 2, 0, -786426, 2, 0, -786397, 2, 0, -786395, 2, 0, -786393, 2, 0, -786390, 1, 0, -786389, 1, 0, -786388, 1, 0, -786387, 1, 0, -786386, 1, 0, -786385, 1, 0, -786384, 1, 0, -786383, 1, 0, -655365, 1, 0, -655364, 1, 0, -655363, 1, 0, -655362, 1, 0, -655361, 1, 0, -720896, 1, 0, -720895, 1, 0, -720894, 1, 0, -720893, 1, 0, -720892, 1, 0, -720891, 1, 0, -720890, 1, 0, -720889, 1, 0, -720886, 0, 0, -720882, 0, 0, -720863, 1, 0, -720862, 1, 0, -720861, 1, 0, -720860, 1, 0, -720859, 1, 0, -720858, 1, 0, -720857, 1, 0, -720856, 1, 0, -720855, 1, 0, -720854, 1, 0, -720853, 1, 0, -720852, 1, 0, -720851, 1, 0, -720850, 1, 0, -720849, 1, 0, -720848, 1, 0, -720847, 1, 0, -589829, 1, 0, -589828, 1, 0, -589827, 1, 0, -589826, 1, 0, -589825, 1, 0, -655360, 1, 0, -655343, 0, 0, -655339, 1, 0, -655336, 1, 0, -655334, 1, 0, -655329, 1, 0, -655318, 1, 0, -655317, 1, 0, -655316, 1, 0, -655315, 1, 0, -655314, 1, 0, -655313, 1, 0, -655312, 1, 0, -655311, 1, 0, -524293, 1, 0, -524292, 1, 0, -524291, 1, 0, -524290, 1, 0, -524289, 1, 0, -589824, 1, 0, -589809, 3, 0, -589794, 1, 0, -589790, 3, 0, -589782, 1, 0, -589781, 1, 0, -589780, 1, 0, -589779, 1, 0, -589778, 1, 0, -589777, 1, 0, -589776, 1, 0, -589775, 1, 0, -589774, 1, 0, -458757, 1, 0, -458756, 1, 0, -458755, 1, 0, -458754, 1, 0, -458753, 1, 0, -524288, 1, 0, -524260, 1, 0, -524246, 1, 0, -524245, 1, 0, -524244, 1, 0, -524243, 1, 0, -524242, 1, 0, -524241, 1, 0, -524240, 1, 0, -524239, 1, 0, -524238, 1, 0, -393221, 1, 0, -393220, 1, 0, -393219, 1, 0, -393218, 1, 0, -393217, 1, 0, -458752, 1, 0, -458751, 2, 0, -458726, 1, 0, -458725, 3, 0, -458710, 1, 0, -458709, 1, 0, -458708, 1, 0, -458707, 1, 0, -458706, 1, 0, -458705, 1, 0, -458704, 1, 0, -458703, 1, 0, -458701, 1, 0, -327685, 1, 0, -327684, 1, 0, -327683, 1, 0, -327682, 1, 0, -327681, 1, 0, -393216, 1, 0, -393215, 1, 0, -393214, 1, 0, -393213, 1, 0, -393212, 1, 0, -393211, 1, 0, -393210, 1, 0, -393207, 0, 0, -393193, 1, 0, -393192, 1, 0, -393177, 1, 0, -393176, 1, 0, -393175, 1, 0, -393174, 1, 0, -393173, 1, 0, -393172, 1, 0, -393171, 1, 0, -393170, 1, 0, -393169, 1, 0, -393168, 1, 0, -393167, 1, 0, -393165, 1, 0, -262149, 1, 0, -262148, 1, 0, -262147, 1, 0, -262146, 1, 0, -262145, 1, 0, -327680, 1, 0, -327668, 0, 0, -327660, 0, 0, -327645, 0, 0, -327638, 1, 0, -327637, 1, 0, -327636, 1, 0, -327635, 1, 0, -327634, 1, 0, -327633, 1, 0, -327632, 1, 0, -327631, 1, 0, -327628, 1, 0, -196613, 1, 0, -196612, 1, 0, -196611, 1, 0, -196610, 1, 0, -196609, 1, 0, -262144, 1, 0, -262127, 0, 0, -262106, 0, 0, -262105, 3, 0, -262102, 1, 0, -262101, 1, 0, -262100, 1, 0, -262099, 1, 0, -262098, 1, 0, -262097, 1, 0, -262096, 1, 0, -262095, 1, 0, -262092, 1, 0, -131077, 1, 0, -131076, 1, 0, -131075, 1, 0, -131074, 1, 0, -131073, 1, 0, -196608, 1, 0, -196594, 0, 0, -196572, 0, 0, -196566, 1, 0, -196565, 1, 0, -196564, 1, 0, -196563, 1, 0, -196562, 1, 0, -196561, 1, 0, -196560, 1, 0, -196559, 1, 0, -196556, 1, 0, -65541, 1, 0, -65540, 1, 0, -65539, 1, 0, -65538, 1, 0, -65537, 1, 0, -131072, 1, 0, -131061, 0, 0, -131040, 0, 0, -131030, 1, 0, -131029, 1, 0, -131028, 1, 0, -131027, 1, 0, -131026, 1, 0, -131025, 1, 0, -131024, 1, 0, -131023, 1, 0, -131021, 1, 0, -5, 1, 0, -4, 1, 0, -3, 1, 0, -2, 1, 0, -1, 1, 0, -65536, 1, 0, -65534, 2, 0, -65528, 2, 0, -65518, 2, 0, -65506, 2, 0, -65500, 2, 0, -65494, 1, 0, -65493, 1, 0, -65492, 1, 0, -65491, 1, 0, -65490, 1, 0, -65489, 1, 0, -65488, 1, 0, -65487, 1, 0, -65486, 1, 0, 65531, 1, 0, 65532, 1, 0, 65533, 1, 0, 65534, 1, 0, 65535, 1, 0, 0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 12, 1, 0, 13, 1, 0, 14, 1, 0, 15, 1, 0, 16, 1, 0, 17, 1, 0, 18, 1, 0, 19, 1, 0, 20, 1, 0, 21, 1, 0, 22, 1, 0, 23, 1, 0, 24, 1, 0, 25, 1, 0, 26, 1, 0, 27, 1, 0, 28, 1, 0, 29, 1, 0, 30, 1, 0, 31, 1, 0, 32, 1, 0, 33, 1, 0, 34, 1, 0, 35, 1, 0, 36, 1, 0, 37, 1, 0, 38, 1, 0, 39, 1, 0, 40, 1, 0, 41, 1, 0, 42, 1, 0, 43, 1, 0, 44, 1, 0, 45, 1, 0, 46, 1, 0, 47, 1, 0, 48, 1, 0, 49, 1, 0, 50, 1, 0, 51, 1, 0, 131067, 1, 0, 131068, 1, 0, 131069, 1, 0, 131070, 1, 0, 131071, 1, 0, 65536, 1, 0, 65537, 1, 0, 65538, 1, 0, 65539, 1, 0, 65540, 1, 0, 65541, 1, 0, 65542, 1, 0, 65543, 1, 0, 65544, 1, 0, 65545, 1, 0, 65546, 1, 0, 65547, 1, 0, 65548, 1, 0, 65549, 1, 0, 65550, 1, 0, 65551, 1, 0, 65552, 1, 0, 65553, 1, 0, 65554, 1, 0, 65555, 1, 0, 65556, 1, 0, 65557, 1, 0, 65558, 1, 0, 65559, 1, 0, 65560, 1, 0, 65561, 1, 0, 65562, 1, 0, 65563, 1, 0, 65564, 1, 0, 65565, 1, 0, 65566, 1, 0, 65567, 1, 0, 65568, 1, 0, 65569, 1, 0, 65570, 1, 0, 65571, 1, 0, 65572, 1, 0, 65573, 1, 0, 65574, 1, 0, 65575, 1, 0, 65576, 1, 0, 65577, 1, 0, 65578, 1, 0, 65579, 1, 0, 65580, 1, 0, 65581, 1, 0, 65582, 1, 0, 65583, 1, 0, 65584, 1, 0, 65585, 1, 0, 65586, 1, 0, 65587, 1, 0, 65588, 1, 0, 65589, 1, 0, 65590, 1, 0, 65591, 1, 0, 196603, 1, 0, 196604, 1, 0, 196605, 1, 0, 196606, 1, 0, 196607, 1, 0, 131072, 1, 0, 131073, 1, 0, 131074, 1, 0, 131075, 1, 0, 131076, 1, 0, 131077, 1, 0, 131078, 1, 0, 131079, 1, 0, 131080, 1, 0, 131081, 1, 0, 131082, 1, 0, 131083, 1, 0, 131084, 1, 0, 131085, 1, 0, 131086, 1, 0, 131087, 1, 0, 131088, 1, 0, 131089, 1, 0, 131090, 1, 0, 131091, 1, 0, 131092, 1, 0, 131093, 1, 0, 131094, 1, 0, 131095, 1, 0, 131096, 1, 0, 131097, 1, 0, 131098, 1, 0, 131099, 1, 0, 131100, 1, 0, 131101, 1, 0, 131102, 1, 0, 131103, 1, 0, 131104, 1, 0, 131105, 1, 0, 131106, 1, 0, 131107, 1, 0, 131108, 1, 0, 131109, 1, 0, 131110, 1, 0, 131111, 1, 0, 131112, 1, 0, 131113, 1, 0, 131114, 1, 0, 131115, 1, 0, 131116, 1, 0, 131117, 1, 0, 131118, 1, 0, 131119, 1, 0, 131120, 1, 0, 131121, 1, 0, 131122, 1, 0, 131123, 1, 0, 131124, 1, 0, 131125, 1, 0, 262136, 1, 0, 262137, 1, 0, 262138, 1, 0, 262139, 1, 0, 262140, 1, 0, 262141, 1, 0, 262142, 1, 0, 262143, 1, 0, 196608, 1, 0, 196609, 1, 0, 196610, 1, 0, 196611, 1, 0, 196612, 1, 0, 196613, 1, 0, 196614, 1, 0, 196615, 1, 0, 196616, 1, 0, 196617, 1, 0, 196618, 1, 0, 196619, 1, 0, 196620, 1, 0, 196621, 1, 0, 196622, 1, 0, 196623, 1, 0, 196624, 1, 0, 196625, 1, 0, 196626, 1, 0, 196627, 1, 0, 196628, 1, 0, 196629, 1, 0, 196630, 1, 0, 196631, 1, 0, 196632, 1, 0, 196633, 1, 0, 196634, 1, 0, 196635, 1, 0, 196636, 1, 0, 196637, 1, 0, 196638, 1, 0, 196639, 1, 0, 196640, 1, 0, 196641, 1, 0, 196642, 1, 0, 196643, 1, 0, 196644, 1, 0, 196645, 1, 0, 196646, 1, 0, 196647, 1, 0, 196648, 1, 0, 196649, 1, 0, 196650, 1, 0, 196651, 1, 0, 196652, 1, 0, 196653, 1, 0, 196654, 1, 0, 196655, 1, 0, 196656, 1, 0, 196657, 1, 0, 196658, 1, 0, 327675, 1, 0, 327676, 1, 0, 327677, 1, 0, 327678, 1, 0, 327679, 1, 0, 262144, 1, 0, 262145, 1, 0, 262146, 1, 0, 262147, 1, 0, 262148, 1, 0, 262149, 1, 0, 262150, 1, 0, 262151, 1, 0, 262152, 1, 0, 262153, 1, 0, 262154, 1, 0, 262155, 1, 0, 262156, 1, 0, 262157, 1, 0, 262158, 1, 0, 262159, 1, 0, 262160, 1, 0, 262161, 1, 0, 262162, 1, 0, 262163, 1, 0, 262164, 1, 0, 262165, 1, 0, 262166, 1, 0, 262167, 1, 0, 262168, 1, 0, 262169, 1, 0, 262170, 1, 0, 262171, 1, 0, 262172, 1, 0, 262173, 1, 0, 262174, 1, 0, 262175, 1, 0, 262176, 1, 0, 262177, 1, 0, 262178, 1, 0, 262179, 1, 0, 262180, 1, 0, 262181, 1, 0, 262182, 1, 0, 262183, 1, 0, 262184, 1, 0, 262185, 1, 0, 262186, 1, 0, 262187, 1, 0, 262188, 1, 0, 262189, 1, 0, 262190, 1, 0, 262191, 1, 0, 262192, 1, 0, 327680, 1, 0, 327681, 1, 0, 327682, 1, 0, 327709, 1, 0, 327710, 1, 0, 327711, 1, 0, 327712, 1, 0, 327713, 1, 0, 327714, 1, 0, 327715, 1, 0, 327716, 1, 0, 327717, 1, 0, 327718, 1, 0, 327719, 1, 0 )
+
+[node name="espinho2" type="Sprite" parent="mapa"]
+position = Vector2( 1211, -1450 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="espinhoTipo1" type="Area2D" parent="mapa/espinho2"]
+position = Vector2( -1211, 1450 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mapa/espinho2/espinhoTipo1"]
+position = Vector2( 1210.5, -1491 )
+shape = SubResource( 52 )
+
+[node name="espinho4" type="StaticBody2D" parent="mapa"]
+position = Vector2( 1210.5, -1491 )
+script = ExtResource( 13 )
+
+[node name="espinho4" type="Area2D" parent="mapa/espinho4"]
+position = Vector2( 2536.5, 1364 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="mapa/espinho4/espinho4"]
+polygon = PoolVector2Array( -92, -127, -120, 0, -121, 45, 123, 45, 123, 2, 94, -129 )
+
+[node name="espinho5" type="Sprite" parent="mapa/espinho4"]
+position = Vector2( 2536.5, 1364 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="espinho" type="Sprite" parent="mapa"]
+position = Vector2( 8606, -151 )
+texture = ExtResource( 11 )
+
+[node name="espinhoTipo2" type="Area2D" parent="mapa/espinho"]
+position = Vector2( -1211, 1450 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="mapa/espinho/espinhoTipo2"]
+polygon = PoolVector2Array( 1210, -1599, 1181, -1440, 1163, -1494, 1137, -1355, 1137, -1303, 1286, -1301, 1288, -1364, 1260, -1492, 1245, -1440 )
+
+[node name="espinho3" type="Sprite" parent="mapa"]
+position = Vector2( 1073, -2644 )
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="espinhoTip3" type="Area2D" parent="mapa/espinho3"]
+position = Vector2( -1211, 1450 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="mapa/espinho3/espinhoTip3"]
+polygon = PoolVector2Array( 1210, -1599, 1181, -1440, 1163, -1494, 1137, -1355, 1137, -1303, 1286, -1301, 1288, -1364, 1260, -1492, 1245, -1440 )
+
+[node name="jogador" type="Node2D" parent="."]
+
+[node name="jogador" type="KinematicBody2D" parent="jogador" groups=["Player"]]
+position = Vector2( 991, -542 )
+scale = Vector2( 7, 7 )
+script = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="jogador/jogador" groups=["Player"]]
+visible = false
+texture = ExtResource( 8 )
+hframes = 13
+vframes = 21
+frame = 123
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="jogador/jogador" groups=["Player"]]
+frames = SubResource( 24 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="jogador/jogador" groups=["Player"]]
+position = Vector2( 1, 7 )
+shape = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="jogador/jogador" groups=["Player"]]
+position = Vector2( 8.00006, -10.5714 )
+scale = Vector2( 0.23, 0.509 )
+current = true
+zoom = Vector2( 3, 3 )
+
+[node name="Timer" type="Timer" parent="jogador/jogador"]
+
+[node name="ITEMS" type="Node2D" parent="."]
+
+[node name="moeda1" type="Area2D" parent="ITEMS" groups=["Items"]]
+position = Vector2( 2383, -95 )
+scale = Vector2( 4, 4 )
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ITEMS/moeda1" groups=["Items"]]
+position = Vector2( -20.5, -12.75 )
+shape = SubResource( 27 )
+
+[node name="moeda" type="AnimatedSprite" parent="ITEMS/moeda1" groups=["Items"]]
+light_mask = 2
+position = Vector2( -20.5, -7.5 )
+frames = SubResource( 36 )
+frame = 4
+playing = true
+
+[node name="coletado" type="AnimatedSprite" parent="ITEMS/moeda1" groups=["Items"]]
+position = Vector2( -20.5, -12.75 )
+frames = SubResource( 51 )
+frame = 5
+
+[node name="moeda2" type="Area2D" parent="ITEMS" groups=["Items"]]
+position = Vector2( 2735, -417 )
+scale = Vector2( 4, 4 )
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ITEMS/moeda2" groups=["Items"]]
+position = Vector2( -20.5, -12.75 )
+shape = SubResource( 27 )
+
+[node name="moeda" type="AnimatedSprite" parent="ITEMS/moeda2" groups=["Items"]]
+light_mask = 2
+position = Vector2( -20.5, -7.5 )
+frames = SubResource( 36 )
+frame = 3
+playing = true
+
+[node name="coletado" type="AnimatedSprite" parent="ITEMS/moeda2" groups=["Items"]]
+position = Vector2( -20.5, -12.75 )
+frames = SubResource( 51 )
+frame = 5
+
+[node name="moeda3" type="Area2D" parent="ITEMS" groups=["Items"]]
+position = Vector2( 9375, -1449 )
+scale = Vector2( 4, 4 )
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ITEMS/moeda3" groups=["Items"]]
+position = Vector2( -20.5, -12.75 )
+shape = SubResource( 27 )
+
+[node name="moeda" type="AnimatedSprite" parent="ITEMS/moeda3" groups=["Items"]]
+light_mask = 2
+position = Vector2( -20.5, -7.5 )
+frames = SubResource( 36 )
+frame = 2
+playing = true
+
+[node name="coletado" type="AnimatedSprite" parent="ITEMS/moeda3" groups=["Items"]]
+position = Vector2( -20.5, -12.75 )
+frames = SubResource( 51 )
+frame = 5
+
+[node name="moeda4" type="Area2D" parent="ITEMS" groups=["Items"]]
+position = Vector2( 5778, -114 )
+scale = Vector2( 4, 4 )
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ITEMS/moeda4" groups=["Items"]]
+position = Vector2( -20.5, -12.75 )
+shape = SubResource( 27 )
+
+[node name="moeda" type="AnimatedSprite" parent="ITEMS/moeda4" groups=["Items"]]
+light_mask = 2
+position = Vector2( -20.5, -7.5 )
+frames = SubResource( 36 )
+frame = 2
+playing = true
+
+[node name="coletado" type="AnimatedSprite" parent="ITEMS/moeda4" groups=["Items"]]
+position = Vector2( -20.5, -12.75 )
+frames = SubResource( 51 )
+frame = 5
+
+[node name="moeda5" type="Area2D" parent="ITEMS" groups=["Items"]]
+position = Vector2( 591, -2485 )
+scale = Vector2( 4, 4 )
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ITEMS/moeda5" groups=["Items"]]
+position = Vector2( -20.5, -12.75 )
+shape = SubResource( 27 )
+
+[node name="moeda" type="AnimatedSprite" parent="ITEMS/moeda5" groups=["Items"]]
+light_mask = 2
+position = Vector2( -20.5, -7.5 )
+frames = SubResource( 36 )
+frame = 2
+playing = true
+
+[node name="coletado" type="AnimatedSprite" parent="ITEMS/moeda5" groups=["Items"]]
+position = Vector2( -20.5, -12.75 )
+frames = SubResource( 51 )
+frame = 5
+
+[node name="moeda6" type="Area2D" parent="ITEMS" groups=["Items"]]
+position = Vector2( 724, -1379 )
+scale = Vector2( 4, 4 )
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ITEMS/moeda6" groups=["Items"]]
+position = Vector2( -20.5, -12.75 )
+shape = SubResource( 27 )
+
+[node name="moeda" type="AnimatedSprite" parent="ITEMS/moeda6" groups=["Items"]]
+light_mask = 2
+position = Vector2( -20.5, -7.5 )
+frames = SubResource( 36 )
+frame = 1
+playing = true
+
+[node name="coletado" type="AnimatedSprite" parent="ITEMS/moeda6" groups=["Items"]]
+position = Vector2( -20.5, -12.75 )
+frames = SubResource( 51 )
+frame = 5
+
+[node name="moeda7" type="Area2D" parent="ITEMS" groups=["Items"]]
+position = Vector2( 9404, -2547 )
+scale = Vector2( 4, 4 )
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ITEMS/moeda7" groups=["Items"]]
+position = Vector2( -20.5, -12.75 )
+shape = SubResource( 27 )
+
+[node name="moeda" type="AnimatedSprite" parent="ITEMS/moeda7" groups=["Items"]]
+light_mask = 2
+position = Vector2( -20.5, -7.5 )
+frames = SubResource( 36 )
+frame = 1
+playing = true
+
+[node name="coletado" type="AnimatedSprite" parent="ITEMS/moeda7" groups=["Items"]]
+position = Vector2( -20.5, -12.75 )
+frames = SubResource( 51 )
+frame = 5
+
+[node name="moeda8" type="Area2D" parent="ITEMS" groups=["Items"]]
+position = Vector2( 8716, -2555 )
+scale = Vector2( 4, 4 )
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ITEMS/moeda8" groups=["Items"]]
+position = Vector2( -20.5, -12.75 )
+shape = SubResource( 27 )
+
+[node name="moeda" type="AnimatedSprite" parent="ITEMS/moeda8" groups=["Items"]]
+light_mask = 2
+position = Vector2( -20.5, -7.5 )
+frames = SubResource( 36 )
+frame = 1
+playing = true
+
+[node name="coletado" type="AnimatedSprite" parent="ITEMS/moeda8" groups=["Items"]]
+position = Vector2( -20.5, -12.75 )
+frames = SubResource( 51 )
+frame = 5
+
+[connection signal="area_shape_entered" from="mapa/espinho4/espinho4" to="mapa/espinho4" method="_on_espinho4_area_shape_entered"]
+[connection signal="timeout" from="jogador/jogador/Timer" to="jogador/jogador" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="ITEMS/moeda1" to="ITEMS/moeda1" method="_on_item_body_entered"]
+[connection signal="animation_finished" from="ITEMS/moeda1/coletado" to="ITEMS/moeda1" method="_on_coletado_animation_finished"]
+[connection signal="body_entered" from="ITEMS/moeda2" to="ITEMS/moeda2" method="_on_item_body_entered"]
+[connection signal="animation_finished" from="ITEMS/moeda2/coletado" to="ITEMS/moeda2" method="_on_coletado_animation_finished"]
+[connection signal="body_entered" from="ITEMS/moeda3" to="ITEMS/moeda3" method="_on_item_body_entered"]
+[connection signal="animation_finished" from="ITEMS/moeda3/coletado" to="ITEMS/moeda3" method="_on_coletado_animation_finished"]
+[connection signal="body_entered" from="ITEMS/moeda4" to="ITEMS/moeda4" method="_on_item_body_entered"]
+[connection signal="animation_finished" from="ITEMS/moeda4/coletado" to="ITEMS/moeda4" method="_on_coletado_animation_finished"]
+[connection signal="body_entered" from="ITEMS/moeda5" to="ITEMS/moeda5" method="_on_item_body_entered"]
+[connection signal="animation_finished" from="ITEMS/moeda5/coletado" to="ITEMS/moeda5" method="_on_coletado_animation_finished"]
+[connection signal="body_entered" from="ITEMS/moeda6" to="ITEMS/moeda6" method="_on_item_body_entered"]
+[connection signal="animation_finished" from="ITEMS/moeda6/coletado" to="ITEMS/moeda6" method="_on_coletado_animation_finished"]
+[connection signal="body_entered" from="ITEMS/moeda7" to="ITEMS/moeda7" method="_on_item_body_entered"]
+[connection signal="animation_finished" from="ITEMS/moeda7/coletado" to="ITEMS/moeda7" method="_on_coletado_animation_finished"]
+[connection signal="body_entered" from="ITEMS/moeda8" to="ITEMS/moeda8" method="_on_item_body_entered"]
+[connection signal="animation_finished" from="ITEMS/moeda8/coletado" to="ITEMS/moeda8" method="_on_coletado_animation_finished"]
